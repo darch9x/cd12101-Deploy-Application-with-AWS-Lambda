@@ -8,7 +8,7 @@ export async function Delete(todoId, userId) {
     await todoAccess.Delete(todoId, userId);
 }
 export async function GetAll(userId) {
-    await todoAccess.GetAll(userId);
+    return await todoAccess.GetAll(userId);
 }
 export async function Update(todoId, userId, todo) {
     await todoAccess.Update(todoId, userId, todo);

@@ -16,6 +16,9 @@ export function NewTodoInput({ onNewTodo }) {
         scope: 'write:todos'
       })
       const dueDate = calculateDueDate()
+      if(!newTodoName){
+        return ;
+      }
       const createdTodo = await createTodo(accessToken, {
         name: newTodoName,
         dueDate

@@ -3,7 +3,7 @@ import cors from '@middy/http-cors';
 import httpErrorHandler from '@middy/http-error-handler';
 import { Upload } from '../../businessLogic/todos.mjs'
 import { createLogger } from '../../utils/logger.mjs';
-
+import { getUserId } from '../../lambda/utils.mjs';
 const logger = createLogger('Log upload');
 export const handler = middy().use(httpErrorHandler()).use(cors({
   credentials: true
